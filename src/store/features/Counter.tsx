@@ -15,8 +15,8 @@ const Counter = () => {
         SetIncrementVal(isNaN(parseFloat(value)) ? 0 : parseFloat(value));
     }
   return (
-    <div>Counter: {count}
-    <p><input type="number" name="incrVal" id="incrVal" defaultValue={incrementVal} onChange={handleChange}/></p>
+    <div>Counter: {count.toFixed(2)}
+    <p><input style={{width:'50%'}} type="number" name="incrVal" id="incrVal" defaultValue={incrementVal} onChange={handleChange}/></p>
     <p><button onClick={handleIncrement}>Increment</button></p>
     <p><button onClick={()=> dispatch(decrement())} >Decrement</button></p>
     <p><button onClick={()=> dispatch(reset())}>Reset</button></p>
